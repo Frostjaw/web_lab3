@@ -1,0 +1,48 @@
+﻿
+@{
+    ViewData["Title"] = "Hello Mockups - Backend3";
+}
+
+<h2>QuizResult</h2>
+@if (ViewData.ContainsKey("firstNumbers")) { 
+    <h3>Right answers @ViewData["numberOfCorrectAnswers"] out @ViewData["numberOfAnswers"]</h3>
+}
+<div style="display:inline-block">
+    @if (@ViewData.ContainsKey("firstNumbers"))
+    {
+        foreach (var number in ViewData["firstNumbers"] as IList<double>)
+        {
+            <p>@number</p>
+        }
+    }
+</div>
+
+<div style="display:inline-block">
+    @if (@ViewData.ContainsKey("operations"))
+    {
+        foreach (var operation in ViewData["operations"] as IList<String>)
+        {
+            <p>@operation</p>
+        }
+    }
+</div>
+
+<div style="display:inline-block">
+    @if (@ViewData.ContainsKey("secondNumbers"))
+    {
+        foreach (var number in ViewData["secondNumbers"] as IList<double>)
+        {
+            <p>@number =  </p>
+        }
+    }
+</div>
+
+<div style="display:inline-block;">
+    @if (@ViewData.ContainsKey("answers"))
+    {
+        foreach (var number in ViewData["answers"] as IList<double>)
+        {
+            <p>@number </p>
+        }
+    }
+</div>

@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "Hello Mockups - Backend3";
+}
+
+<h2>Quiz</h2>
+<p>@ViewData["firstNumber"] @ViewData["operation"] @ViewData["secondNumber"] = </p>
+<form method="post" class="form-horizontal" role="form">
+    <div class="form-group">
+        <div class="col-md-2">
+            <input type="text" name="result" class="form-control" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-md-2">
+            <input type="submit" class="btn btn-default" value="Next" />
+        </div>
+    </div>
+</form>
+<form method="post" action="/Home/QuizResult" class="form-horizontal">
+    <div class="form-group">
+        <div class="col-md-2">
+            <input type="submit" class="btn btn-default" value="Finish" />
+        </div>
+    </div>
+</form>
+
